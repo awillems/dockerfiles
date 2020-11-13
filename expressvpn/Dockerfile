@@ -1,6 +1,6 @@
 
 # Run expressvpn in a container
-FROM debian:jessie
+FROM arm32v7/debian:latest
 LABEL maintainer="awillems@matchbase.tech"
 
 ENV ACTIVATION_CODE Code
