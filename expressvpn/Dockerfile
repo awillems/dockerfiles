@@ -1,7 +1,6 @@
 
 # Run expressvpn in a container
-FROM arm32v7/debian:jessie
-COPY ./qemu-arm-static /usr/bin/qemu-arm-static
+FROM arm32v7/debian:buster-slim
 LABEL maintainer="awillems@matchbase.tech"
 
 ENV ACTIVATION_CODE Code
