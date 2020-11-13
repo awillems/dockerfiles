@@ -2,16 +2,16 @@
 # Run expressvpn in a container
 
 FROM debian:buster-slim
-LABEL maintainer="benjamin@polkaned.net"
+LABEL maintainer="awillems@matchbase.tech"
 
 ENV ACTIVATION_CODE Code
 ENV LOCATION smart
-ARG APP=expressvpn_3.0.2.12-1_amd64.deb
+ARG APP=expressvpn_3.2.1.2-1_armhf.deb
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates wget expect iproute2 curl \
     && rm -rf /var/lib/apt/lists/* \
-    && wget -q "https://download.expressvpn.xyz/clients/linux/${APP}" -O /tmp/${APP} \
+    && wget -q "https://www.expressvpn.works/clients/linux/${APP}" -O /tmp/${APP} \
     && dpkg -i /tmp/${APP} \
     && rm -rf /tmp/*.deb \
     && apt-get purge -y --auto-remove wget
