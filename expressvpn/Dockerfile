@@ -1,6 +1,7 @@
 
 # Run expressvpn in a container
-FROM armhf/debian:latest
+FROM armhf/debian:buster-slim
+COPY qemu-arm-static /usr/bin
 LABEL maintainer="awillems@matchbase.tech"
 
 ENV ACTIVATION_CODE Code
