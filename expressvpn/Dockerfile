@@ -1,6 +1,6 @@
 
 # Run expressvpn in a container
-FROM arm32v7/debian:buster-slim
+FROM container4armhf/armhf-alpine:3.4
 LABEL maintainer="awillems@matchbase.tech"
 
 ENV ACTIVATION_CODE Code
