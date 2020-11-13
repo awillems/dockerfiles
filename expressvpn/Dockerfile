@@ -1,6 +1,6 @@
 
 # Run expressvpn in a container
-FROM armhf/debian:buster-slim
+FROM arm32v7/debian:buster-slim
 COPY qemu-arm-static /usr/bin
 LABEL maintainer="awillems@matchbase.tech"
 
